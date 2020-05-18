@@ -26,10 +26,10 @@ install-circleci:
 	cd circleci-cli_0.1.7411_linux_amd64
 
 install-minikube:
-sudo curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 \
-  && chmod +x minikube
-  sudo mkdir -p /usr/local/bin/
-  sudo install minikube /usr/local/bin/
+	sudo curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 \
+	&& sudo chmod +x minikube
+	sudo mkdir -p /usr/local/bin/
+	sudo install minikube /usr/local/bin/
   
 
 test:
