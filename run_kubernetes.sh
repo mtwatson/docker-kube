@@ -9,10 +9,15 @@ dockerpath="mtwatson/udacity-docker-milestone"
 
 # Step 2
 # Run the Docker Hub container with kubernetes
+# docker swarm init
+# docker stack deploy --compose-file ./docker-compose.yml udacityStack
+# docker stack services udacityStack
 
+kubectl run udacityStack --image=mtwatson/udacity-docker-milestone --port=80
 
 # Step 3:
 # List kubernetes pods
+kubectl get pods
 
 # Step 4:
 # Forward the container port to a host
