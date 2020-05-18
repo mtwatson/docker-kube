@@ -14,6 +14,23 @@ install:
 	# This should be run from inside a virtualenv
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
+		
+install-hadolint:
+	sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.17.5/hadolint-Linux-x86_64 && ls
+	sudo chmod +x /bin/hadolint
+	
+install-circleci:
+	# EXPERIMENTAL NOT DONE YET! CHECK THE OTHER AREA FOR FULL STEP BY STEP
+	sudo wget https://github.com/CircleCI-Public/circleci-cli/releases/download/v0.1.7411/circleci-cli_0.1.7411_linux_amd64.tar.
+	tar zxvf circleci-cli_0.1.7411_linux_amd64.tar.gz
+	cd circleci-cli_0.1.7411_linux_amd64
+
+install-minikube:
+sudo curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 \
+  && chmod +x minikube
+  sudo mkdir -p /usr/local/bin/
+  sudo install minikube /usr/local/bin/
+  
 
 test:
 	# Additional, optional, tests could go here
