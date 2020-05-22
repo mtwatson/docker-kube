@@ -20,16 +20,22 @@ install-hadolint:
 	sudo chmod +x /bin/hadolint
 	
 install-circleci:
-	# EXPERIMENTAL NOT DONE YET! CHECK THE OTHER AREA FOR FULL STEP BY STEP
 	sudo wget https://github.com/CircleCI-Public/circleci-cli/releases/download/v0.1.7411/circleci-cli_0.1.7411_linux_amd64.tar.
 	tar zxvf circleci-cli_0.1.7411_linux_amd64.tar.gz
 	cd circleci-cli_0.1.7411_linux_amd64
+	
+install-kuber: 
+	curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+	sudo chmod +x ./kubectl
+	sudo mv ./kubectl /usr/local/bin/kubectl
+	kubectl version --client
 
 install-minikube:
 	sudo curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 \
 	&& sudo chmod +x minikube
 	sudo mkdir -p /usr/local/bin/
 	sudo install minikube /usr/local/bin/
+	sudo rm minikube
   
 
 test:
