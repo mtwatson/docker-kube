@@ -13,7 +13,7 @@ dockerpath="mtwatson/udacity-docker-milestone"
 # docker stack deploy --compose-file ./docker-compose.yml udacityStack
 # docker stack services udacityStack
 
-kubectl run udacityStack --image=mtwatson/udacity-docker-milestone --port=80
+kubectl run udacity-stack --image=mtwatson/udacity-docker-milestone --port=80
 
 # Step 3:
 # List kubernetes pods
@@ -21,4 +21,5 @@ kubectl get pods
 
 # Step 4:
 # Forward the container port to a host
+kubectl port-forward udacity-stack 8000:80
 
