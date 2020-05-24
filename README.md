@@ -28,7 +28,15 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 ## Setup the Environment
 
 * Create a virtualenv and activate it
-* Run `make install` to install the necessary dependencies
+* Run `make install` to install the basic necessary dependencies.
+  This includes:
+    1. pip + upgrade pip
+    2. All Python software located inside of requirements.txt
+* Run `make install hadolint` to install Hadolint.
+* Run `make install-circleci` to install CircleCi.
+* Run `make install-kuber` to install kubernetes.
+* Run `make install-minikube` to install minikube.
+* Run `make lint` to lint the project code, which includes both pylint and Hadolint.
 
 ### Running `app.py`
 
@@ -36,9 +44,3 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 2. Run in Docker:  `./run_docker.sh`
 3. Run in Kubernetes:  `./run_kubernetes.sh`
 
-### Kubernetes Steps
-
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
