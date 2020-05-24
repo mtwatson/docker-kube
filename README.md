@@ -1,4 +1,6 @@
-<include a CircleCI status badge, here>
+# Example:
+[![CircleCI](https://circleci.com/gh/mtwatson/docker-kube.svg?style=svg)](https://circleci.com/gh/circleci/circleci-docs)
+
 
 ## Project Overview
 
