@@ -1,1 +1,7 @@
-<paste log output from Kubernetes-mediated prediction, here>
+ec2-user:~/environment/docker-kube (master) $ ./make_prediction.sh
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
